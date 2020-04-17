@@ -36,7 +36,7 @@
     ```elixir
     config :ueberauth, Ueberauth.Strategy.Todoist.OAuth,
       client_id: {:system, "TODOIST_CLIENT_ID"},
-      client_secret: {:system, "To_CLIENT_SECRET"}
+      client_secret: {:system, "TODOIST_CLIENT_SECRET"}
     ```
 
 1.  Include the Überauth plug in your controller:
