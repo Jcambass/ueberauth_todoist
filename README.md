@@ -75,7 +75,7 @@ Depending on the configured url you can initiate the request through:
 
 Or with options:
 
-    /auth/toddoist?scope=data:read
+    /auth/todoist?scope=data:read
 
 Scope can be configured either explicitly as a `scope` query value on the request path or in your configuration:
 
