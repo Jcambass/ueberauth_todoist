@@ -1,6 +1,5 @@
 defmodule Ueberauth.Strategy.Todoist do
-  @moduledoc """
-  """
+  @moduledoc @false
 
   use Ueberauth.Strategy,
     uid_field: :id,
