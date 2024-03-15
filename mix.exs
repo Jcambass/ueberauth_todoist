@@ -7,7 +7,7 @@ defmodule UeberauthTodoist.MixProject do
       name: "Ueberauth Todoist",
       package: package(),
       version: "1.0.0",
-      elixir: "~> 1.9",
+      elixir: "~> 1.14",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       source_url: "https://github.com/jcambass/ueberauth_todoist",
@@ -28,6 +28,7 @@ defmodule UeberauthTodoist.MixProject do
     [
       {:oauth2, "~> 1.0 or ~> 2.0"},
       {:ueberauth, "~> 0.10.8"},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
