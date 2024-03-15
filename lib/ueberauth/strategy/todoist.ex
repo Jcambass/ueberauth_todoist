@@ -1,5 +1,5 @@
 defmodule Ueberauth.Strategy.Todoist do
-  @moduledoc @false
+  @moduledoc false
 
   use Ueberauth.Strategy,
     uid_field: :id,
@@ -9,6 +9,7 @@ defmodule Ueberauth.Strategy.Todoist do
   alias Ueberauth.Auth.Info
   alias Ueberauth.Auth.Credentials
   alias Ueberauth.Auth.Extra
+  alias Ueberauth.Strategy.Helpers
 
   @doc """
   Handles the initial redirect to the todoist authentication page.
@@ -28,6 +29,7 @@ defmodule Ueberauth.Strategy.Todoist do
       else
         [scope: scopes]
       end
+      |> Helpers.with_state_param(conn)
 
     module = option(conn, :oauth2_module)
     redirect!(conn, apply(module, :authorize_url!, [opts]))
