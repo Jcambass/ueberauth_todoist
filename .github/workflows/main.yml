@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-20.04
 
     env:
-      ELIXIR_VERSION: "1.15"
-      OTP_VERSION: "26.1"
+      ELIXIR_VERSION: "1.9"
+      OTP_VERSION: "22.3"
 
     steps:
       - name: Check out this repository
