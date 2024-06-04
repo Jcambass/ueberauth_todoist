@@ -27,7 +27,7 @@ defmodule UeberauthTodoist.MixProject do
   defp deps do
     [
       {:oauth2, "~> 1.0 or ~> 2.0"},
-      {:ueberauth, "~> 0.6.0"},
+      {:ueberauth, "~> 0.10.8"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
