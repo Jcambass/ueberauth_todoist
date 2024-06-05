@@ -12,7 +12,7 @@ defmodule Ueberauth.Strategy.Todoist.OAuth do
 
   @defaults [
     strategy: __MODULE__,
-    site: "https://api.todoist.com/sync/v8",
+    site: "https://api.todoist.com/sync/v9",
     authorize_url: "https://todoist.com/oauth/authorize",
     token_url: "https://todoist.com/oauth/access_token"
   ]
