@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     env:
-      ELIXIR_VERSION: "1.15"
+      ELIXIR_VERSION: "1.14"
       OTP_VERSION: "26.1"
 
     steps:
