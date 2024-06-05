@@ -45,7 +45,7 @@ defmodule Ueberauth.Strategy.Todoist do
 
     if token.access_token == nil do
       set_errors!(conn, [
-        error(token.other_params["error"], nil)
+        error(token.other_params["error"], "Error while reading authentication token")
       ])
     else
       fetch_user(conn, token)
