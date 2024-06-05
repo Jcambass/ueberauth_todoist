@@ -14,7 +14,15 @@ defmodule UeberauthTodoist.MixProject do
       homepage_url: "https://github.com/jcambass/ueberauth_todoist",
       description: description(),
       deps: deps(),
-      docs: docs()
+      docs: docs(),
+
+      # Dialyzer
+      dialyzer: [
+        plt_local_path: "plts",
+        plt_core_path: "plts",
+        plt_add_apps: [:ssl, :crypto, :mix, :ex_unit, :erts, :kernel, :stdlib]
+      ],
+
     ]
   end
 
@@ -30,7 +38,12 @@ defmodule UeberauthTodoist.MixProject do
       {:ueberauth, "~> 0.10.8"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev}
-    ]
+    ] ++
+    if Version.match?(System.version(), "~> 1.12") do
+      [{:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}]
+    else
+      []
+    end
   end
 
   defp docs do
